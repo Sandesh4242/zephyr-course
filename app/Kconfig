@@ -32,6 +32,13 @@ config BLINK_SLEEP_TIME_MS
     help
       Time between LED toggles in miliseconds.
 
+config APP_HEARTBEAT_PERIOD_MS
+  int "APP HEARTBEAT PERIOD MS (100- 2000)"
+  range 100 2000
+  default 500
+  help
+    controls the blink speed of heartbeat led strip
+
 
 menuconfig ADVANCED_LED_SETTINGS
   bool "Advanced LED settings"
