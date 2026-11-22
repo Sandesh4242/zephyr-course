@@ -13,6 +13,7 @@ LOG_MODULE_REGISTER(main, LOG_LEVEL_INF);
 
 int main(void)
 {
+    LOG_INF("Board Initialized");
     bool led_state = true;
 
     if (!device_is_ready(strip)) return 0;
