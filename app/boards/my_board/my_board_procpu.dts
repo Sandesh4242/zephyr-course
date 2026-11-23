@@ -2,6 +2,7 @@
 
 #include <espressif/esp32s3/esp32s3_wroom_n8.dtsi>
 #include <espressif/partitions_0x0_amp.dtsi>
+#include "esp32s3_devkitc-pinctrl.dtsi"
 
 
 
@@ -22,3 +23,9 @@
 
 };
 
+&uart0 {
+	status = "okay";
+	current-speed = <115200>;
+	pinctrl-0 = <&uart0_default>;
+	pinctrl-names = "default";
+};

@@ -1,5 +1,6 @@
 #include <dt-bindings/led/led.h>
 
+
 / {
 	aliases {
 		app-led = &led_strip;
@@ -14,6 +15,13 @@
 				 LED_COLOR_ID_BLUE>;
 		reset-delay = <300>;
 	};
+
+	our_driver_inst: our_driver_inst {
+		compatible = "our,driver";
+		status = "okay";
+	};
+
+
 };
 
 &pinctrl {
@@ -29,3 +37,4 @@
 	pinctrl-names = "default";
 	status = "okay";
 };
+
